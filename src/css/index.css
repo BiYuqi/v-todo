@@ -79,7 +79,7 @@ body{
     color: #16A05D;
 }
 .en-middle span.on{
-    color: #16A05D;
+    color: #46B981;
 }
 .en-middle .clearnote{
     margin-left: 40px;
@@ -89,7 +89,15 @@ body{
     color: #333;
 }
 .en-last span{
-    color: green;
+    color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #46B981;
 }
 /**/
 .content-show{
@@ -167,6 +175,51 @@ body{
 }
 .con-item:hover .remove{
     display: block;
+}
+/*modal*/
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 990;
+}
+.modal-cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 996;
+    background: #000;
+    opacity: 0.6;
+}
+.modal-con{
+    width: 600px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    background: #EEEEEE;
+    transform: translate(-50%,-50%);
+}
+.modal-con .headr{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #088D53;
+}
+.modal-con .render{
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 140px;
+    overflow-y: auto;
 }
 @media screen and (max-width:800px) {
     *{
@@ -247,7 +300,7 @@ body{
         color: #16A05D;
     }
     .en-middle span.on{
-        color: #16A05D;
+        color: #46B981;
     }
     .en-middle .clearnote{
         margin-left: 20px;
@@ -259,7 +312,15 @@ body{
         padding-left: 10px;
     }
     .en-last span{
-        color: green;
+        color: #fff;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #46B981;
     }
     /**/
     .content-show{
@@ -335,9 +396,54 @@ body{
     	text-overflow: ellipsis;
     	overflow: hidden;
     	white-space: nowrap;
-        width: 280px;
+        width: 200px;
     }
     .con-item:hover .remove{
         display: none;
+    }
+    /*modal*/
+    .modal{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 990;
+    }
+    .modal-cover{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 996;
+        background: #000;
+        opacity: 0.6;
+    }
+    .modal-con{
+        width: 90%;
+        height: 200px;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 999;
+        background: #EEEEEE;
+        transform: translate(-50%,-50%);
+    }
+    .modal-con .headr{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        color: #088D53;
+    }
+    .modal-con .render{
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 140px;
+        overflow-y: auto;
     }
 }

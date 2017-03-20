@@ -29,11 +29,22 @@
             <div class="content-show">
                 <div class="con-item" v-for="(item,index) in listGroup" v-bind:class="{finish: item.status == 1}">
                     <span class="toggle" @click="toggleCircle(index)"></span>
-                    <p>{{item.content}}</p>
+                    <p @click="showClick(item.content)">{{item.content}}</p>
                     <i class="add-time">{{item.time}}</i>
                     <em class="remove" @click="removeSingle(index)">删除</em>
                 </div>
             </div>
+            <template>
+                <div class="modal" v-if="isShow" @click="isShowClick">
+                    <div class="modal-cover"></div>
+                    <div class="modal-con">
+                        <div class="headr">不积跬步,无以至千里</div>
+                        <div class="render">
+                            {{isShowdata}}
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div>
         <script src="dist/bundle.js"></script>
     </body>

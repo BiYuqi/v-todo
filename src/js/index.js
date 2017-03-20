@@ -23,7 +23,9 @@ new Vue({
         return {
             tvalue:'',
             list: JSON.parse(localStorage.getItem('list')) || [],
-            type: 'all'
+            type: 'all',
+            isShow:false,
+            Showdata:''
         }
     },
     methods: {
@@ -62,6 +64,13 @@ new Vue({
             if(event.keyCode == '13'){
                 this.addData();
             }
+        },
+        showClick(it){
+            this.Showdata = it;
+            this.isShow = true;
+        },
+        isShowClick () {
+            this.isShow = false;
         }
     },
     computed:{
@@ -76,6 +85,9 @@ new Vue({
         },
         listGroup () {
             return filters[this.type](this.list);
+        },
+        isShowdata () {
+            return this.Showdata;
         }
     }
 })
