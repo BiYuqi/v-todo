@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue2.0+webpack2.0实现本地todo应用</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="header">Todo应用</div>
+            <div class="en-input">
+                <div class="en-inner">
+                    <input type="text" @keyup="isEnter" placeholder="添加任务" v-model="tvalue">
+                    <span class="add-data" @click="addData">+</span>
+                </div>
+            </div>
+            <div class="en-show">
+                <div class="en-target">
+                    <div class="en-last"><span>{{enRest}}</span>项任务</div>
+                    <div class="en-middle">
+                        <span :class="{on: type=='all'}" @click="changeType('all')">全部</span>
+                        <span :class="{on: type=='active'}" @click="changeType('active')">未完成</span>
+                        <span :class="{on: type=='completed'}" @click="changeType('completed')">已完成</span>
+                        <span class="clearnote" @click="clearnotes">清除已完成</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-show">
+                <div class="con-item" v-for="(item,index) in listGroup" v-bind:class="{finish: item.status == 1}">
+                    <span class="toggle" @click="toggleCircle(index)"></span>
+                    <p>{{item.content}}</p>
+                    <i class="add-time">{{item.time}}</i>
+                    <em class="remove" @click="removeSingle(index)">删除</em>
+                </div>
+            </div>
+        </div>
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>

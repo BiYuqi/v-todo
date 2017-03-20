@@ -1,0 +1,25 @@
+{
+  "name": "vue-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "less": "^2.7.2",
+    "less-loader": "^3.0.0",
+    "style-loader": "^0.14.1",
+    "url-loader": "^0.5.8",
+    "vue": "^2.2.4",
+    "webpack": "^2.2.1"
+  }
+}
