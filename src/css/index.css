@@ -99,6 +99,9 @@ body{
     text-align: center;
     background-color: #46B981;
 }
+.en-last i{
+    font-style: normal;
+}
 /**/
 .content-show{
     width: 600px;
@@ -172,6 +175,7 @@ body{
 	overflow: hidden;
 	white-space: nowrap;
     width: 350px;
+    cursor: pointer;
 }
 .con-item:hover .remove{
     display: block;
@@ -268,6 +272,8 @@ body{
         width: 40px;
         height: 45px;
         line-height: 45px;
+        /*临时调整移动端位置*/
+        /*line-height: 50px;*/
         text-align: center;
         background-color: #EDB474;
         position: absolute;
@@ -321,6 +327,12 @@ body{
         border-radius: 50%;
         text-align: center;
         background-color: #46B981;
+        /*临时调整移动端位置*/
+        vertical-align: middle;
+    }
+    .en-last i{
+        font-style: normal;
+        vertical-align: middle;
     }
     /**/
     .content-show{
@@ -396,7 +408,9 @@ body{
     	text-overflow: ellipsis;
     	overflow: hidden;
     	white-space: nowrap;
-        width: 200px;
+        /*width: 200px;*/
+        /*临时调整为灵活宽度*/
+        width: 55%;
     }
     .con-item:hover .remove{
         display: none;

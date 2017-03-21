@@ -1,6 +1,7 @@
 import '../css/index.css';
 import Vue from 'vue/dist/vue.js';
 import './timeplug.js';
+import welldata from './data.json';
 
 var filters = {
     all: function(list) {
@@ -25,7 +26,8 @@ new Vue({
             list: JSON.parse(localStorage.getItem('list')) || [],
             type: 'all',
             isShow:false,
-            Showdata:''
+            Showdata:'',
+            randomNum:1
         }
     },
     methods: {
@@ -66,11 +68,19 @@ new Vue({
             }
         },
         showClick(it){
+            // 传值
             this.Showdata = it;
             this.isShow = true;
         },
         isShowClick () {
+            // 随机数字赋值
+            this.randomNum = this.random();
+            // 模态
             this.isShow = false;
+        },
+        random (){
+            // 随机数字
+            return Math.floor(Math.random()*87);
         }
     },
     computed:{
@@ -88,6 +98,10 @@ new Vue({
         },
         isShowdata () {
             return this.Showdata;
+        },
+        wellNown () {
+            // 随机名言
+            return welldata[this.randomNum];
         }
     }
 })

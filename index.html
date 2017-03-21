@@ -17,7 +17,7 @@
             </div>
             <div class="en-show">
                 <div class="en-target">
-                    <div class="en-last"><span>{{enRest}}</span>项任务</div>
+                    <div class="en-last"><span>{{enRest}}</span><i>项任务</i></div>
                     <div class="en-middle">
                         <span :class="{on: type=='all'}" @click="changeType('all')">全部</span>
                         <span :class="{on: type=='active'}" @click="changeType('active')">未完成</span>
@@ -38,7 +38,7 @@
                 <div class="modal" v-if="isShow" @click="isShowClick">
                     <div class="modal-cover"></div>
                     <div class="modal-con">
-                        <div class="headr">不积跬步,无以至千里</div>
+                        <div class="headr">{{wellNown}}</div>
                         <div class="render">
                             {{isShowdata}}
                         </div>
