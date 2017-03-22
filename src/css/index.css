@@ -3,6 +3,9 @@
     padding:0;
     box-sizing: border-box;
 }
+[v-cloak]{
+    display: none;
+}
 body,
 html{
     height: 100%;

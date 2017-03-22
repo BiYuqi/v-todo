@@ -17,7 +17,7 @@
             </div>
             <div class="en-show">
                 <div class="en-target">
-                    <div class="en-last"><span>{{enRest}}</span><i>项任务</i></div>
+                    <div class="en-last"><span v-cloak>{{enRest}}</span><i>项任务</i></div>
                     <div class="en-middle">
                         <span :class="{on: type=='all'}" @click="changeType('all')">全部</span>
                         <span :class="{on: type=='active'}" @click="changeType('active')">未完成</span>
@@ -29,8 +29,8 @@
             <div class="content-show">
                 <div class="con-item" v-for="(item,index) in listGroup" v-bind:class="{finish: item.status == 1}">
                     <span class="toggle" @click="toggleCircle(index)"></span>
-                    <p @click="showClick(item.content)">{{item.content}}</p>
-                    <i class="add-time">{{item.time}}</i>
+                    <p @click="showClick(item.content)" v-cloak>{{item.content}}</p>
+                    <i class="add-time" v-cloak>{{item.time}}</i>
                     <em class="remove" @click="removeSingle(index)">删除</em>
                 </div>
             </div>
