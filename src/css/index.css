@@ -411,6 +411,7 @@ body{
         /*width: 200px;*/
         /*临时调整为灵活宽度*/
         width: 55%;
+        cursor:default;
     }
     .con-item:hover .remove{
         display: none;
