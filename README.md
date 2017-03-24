@@ -7,4 +7,4 @@ cd v-todo
 npm install
 ```
 ## apk下载(安卓版)
-[mytodo](http://pan.baidu.com/s/1o8z4oVS)
+[mytodo](http://pan.baidu.com/s/1jHQ0GbO)
