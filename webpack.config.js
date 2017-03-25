@@ -1,6 +1,6 @@
 var path = require('path');
 var buildPath = path.resolve(__dirname,"dist");
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -14,7 +14,9 @@ module.exports = {
         rules:[
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader'
+                })
             },
             {
                 test: /\.(png|jpg)$/,
@@ -34,6 +36,9 @@ module.exports = {
       alias: {
         'vue$': 'vue/dist/vue.common.js'
       }
-    }
+    },
+    plugins: [
+       new ExtractTextPlugin('styles.css'),
+    ]
 
 }
