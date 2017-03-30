@@ -36,15 +36,17 @@
                 </div>
             </div>
             <template>
-                <div class="modal" v-if="isShow" @click="isShowClick">
-                    <div class="modal-cover"></div>
-                    <div class="modal-con">
-                        <div class="headr">{{wellNown}}</div>
-                        <div class="render">
-                            {{isShowdata}}
+                <transition name="fade">
+                    <div class="modal" v-if="isShow" @click="isShowClick">
+                        <div class="modal-cover"></div>
+                        <div class="modal-con">
+                            <div class="headr">{{wellNown}}</div>
+                            <div class="render">
+                                {{isShowdata}}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </transition>
             </template>
         </div>
         <script src="dist/bundle.js"></script>
