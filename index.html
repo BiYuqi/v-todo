@@ -9,11 +9,11 @@
     </head>
     <body>
         <div id="wrapper">
-            <div class="header">Todo应用</div>
+            <div class="header">TD应用</div>
             <div class="en-input">
                 <div class="en-inner">
-                    <input type="text" @keyup="isEnter" placeholder="添加任务" v-model="tvalue">
-                    <span class="add-data" @click="addData">+</span>
+                    <input type="text" @keyup="isEnter" placeholder="支持Enter键添加任务" v-model="tvalue">
+                    <p class="add-data" @click="addData"><i>+</i></p>
                 </div>
             </div>
             <div class="en-show">
